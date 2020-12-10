@@ -7,24 +7,22 @@ import org.openqa.selenium.support.FindBy;
 
 public class GmailLoginPage extends BasePage{
 
-    @FindBy(name = "identifier")
+    @FindBy(id = "identifierId")
     private WebElement usernameField;
 
     @FindBy(name = "password")
     private WebElement passwordField;
 
-    @FindBy(className = "gb_ue gb_qc gb_se")
-    private WebElement inboxLogo;
 
     public GmailLoginPage(WebDriver driver) {
         super(driver);
     }
 
     public GmailPage login(String username, String password) throws InterruptedException {
+        waitForElementToBeVisible(usernameField);
         usernameField.sendKeys(username);
         usernameField.sendKeys(Keys.RETURN);
         waitForElementToBeVisible(passwordField);
-        //Thread.sleep(5000);
         passwordField.sendKeys(password);
         passwordField.sendKeys((Keys.RETURN));
         Thread.sleep(5000);
