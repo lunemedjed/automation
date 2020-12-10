@@ -19,7 +19,7 @@ public class GmailLoginTest {
 
             Assert.assertTrue(gmailPage.hasUnread());
 
-            gmailPage.logout();
+        //    gmailPage.logout();
         }
         finally {
             //driver.quit();
