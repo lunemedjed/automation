@@ -22,7 +22,7 @@ public class SearchTest {
 
         googlePage.search("Mitto CH");
 
-        Assert.assertTrue(googlePage.isFirst());
+        Assert.assertTrue(googlePage.isMittoFirst());
 
 }
 
