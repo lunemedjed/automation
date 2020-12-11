@@ -25,6 +25,10 @@ public class ConfigProperties {
         return prop.getProperty("urlGmail");
     }
 
+    public static String getURLLogoutGmail() {
+        return prop.getProperty("urlLogoutGmail");
+    }
+
     public static String getBrowser() {
         return prop.getProperty("browser");
     }

@@ -1,5 +1,6 @@
 package lib.pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -16,11 +17,12 @@ public class BasePage {
 
     }
     public BasePage waitForElementToBeVisible(WebElement element) {
-       // Log.debug("waitForElementToBeVisible()");
-        WebDriverWait wait = new WebDriverWait(driver, 60);
+        System.out.println("waitForElementToBeVisible");
+        WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOf(element));
         return this;
     }
+
 
 
 }

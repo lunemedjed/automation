@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.concurrent.TimeUnit;
+
 public class GmailLoginPage extends BasePage{
 
     @FindBy(id = "identifierId")
@@ -25,15 +27,10 @@ public class GmailLoginPage extends BasePage{
         waitForElementToBeVisible(passwordField);
         passwordField.sendKeys(password);
         passwordField.sendKeys((Keys.RETURN));
-        Thread.sleep(5000);
+        TimeUnit.MILLISECONDS.sleep(5000);
         return new GmailPage(driver);
 
     }
-
-    //public boolean isLoggedIn () {
-    //    waitForElementToBeVisible(inboxLogo);
-    //    return inboxLogo.getAttribute("href").equals("#inbox");
-    //}
 
 
 }

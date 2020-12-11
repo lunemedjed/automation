@@ -7,7 +7,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class GmailLoginTest {
+public class UnreadEmailTest {
 
     WebDriver driver;
 
@@ -17,7 +17,8 @@ public class GmailLoginTest {
     }
 
     @Test
-    public void gmailLoginTest() throws InterruptedException {
+    public void unreadEmailTest() throws InterruptedException {
+
 
         GmailLoginPage gmailLoginPage = new GmailLoginPage(driver);
 
@@ -25,14 +26,12 @@ public class GmailLoginTest {
 
         Assert.assertTrue(gmailPage.isLoggedIn());
 
-    }
+        Assert.assertTrue(gmailPage.hasUnread());
 
+
+    }
     @AfterTest
     public void quit() {
         driver.quit();
     }
-
-
-
 }
-
