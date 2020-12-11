@@ -20,13 +20,13 @@ public class GooglePage extends BasePage{
 
     public void search (String searchTerm) {
         waitForElementToBeVisible(searchField);
+        searchField.clear();
         searchField.click();
         searchField.sendKeys(searchTerm);
         searchField.submit();
     }
 
     public boolean isMittoFirst() {
-        System.out.println(firstResult.getAttribute("href"));
         return firstResult.getAttribute("href").equals("https://www.mitto.ch/");
 
     }

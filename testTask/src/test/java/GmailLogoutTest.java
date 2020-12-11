@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class LogoutGmailTest {
+public class GmailLogoutTest {
 
     WebDriver driver;
 

@@ -7,7 +7,7 @@
             <class name="SearchTest"/>
             <class name="GmailLoginTest"/>
             <class name="UnreadEmailTest"/>
-            <class name="LogoutGmailTest"/>
+            <class name="GmailLogoutTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
